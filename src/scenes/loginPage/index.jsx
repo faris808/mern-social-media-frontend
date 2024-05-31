@@ -6,19 +6,14 @@ import {
   IconButton,
 } from "@mui/material";
 import Form from "./Form";
-import Navbar from "scenes/navbar";
 import { DarkMode, LightMode } from "@mui/icons-material";
-import { useDispatch, useSelector } from "react-redux";
-import { setMode, setLogout } from "state";
+import { useDispatch} from "react-redux";
+import { setMode} from "state";
 const LoginPage = () => {
   const theme = useTheme();
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
   const dispatch = useDispatch();
-  const neutralLight = theme.palette.neutral.light;
   const dark = theme.palette.neutral.dark;
-  const background = theme.palette.background.default;
-  const primaryLight = theme.palette.primary.light;
-  const alt = theme.palette.background.alt;
   return (
       <Box>
         <Box
